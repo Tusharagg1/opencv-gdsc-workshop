@@ -1,6 +1,5 @@
 # get the edges of the objects in an image
 import cv2
-import numpy as np
 
 img = cv2.imread('window.jpeg')
 
@@ -23,6 +22,7 @@ def changeCannyUpper(*args):
 
 cv2.createTrackbar('Lower threshold', 'Edge detection', 0, 255, changeCannyLower)
 cv2.createTrackbar('Upper threshold', 'Edge detection', 0, 255, changeCannyUpper)
+
 
 def edge_detection():
     edge = cv2.Canny(img, canny_lower, canny_upper)

@@ -52,11 +52,12 @@ cv2.createTrackbar('Saturation Upper', 'Color Space', 0, 255, changeSatHigh)
 cv2.createTrackbar('Value Lower', 'Color Space', 0, 255, changeValLow)
 cv2.createTrackbar('Value Upper', 'Color Space', 0, 255, changeValHigh)
 
+
 # convert b/w color spaces
 def create_mask():
-    hsv = cv2.cvtColor(cap, cv2.COLOR_RGB2HSV) # RGB to HSV
+    hsv = cv2.cvtColor(cap, cv2.COLOR_RGB2HSV)  # RGB to HSV
 
-    lower_bound = np.array([hue, sat, val]) # hue saturation values
+    lower_bound = np.array([hue, sat, val])  # hue saturation values
     upper_bound = np.array([hueUpper, satUpper, valUpper])
 
     mask = cv2.inRange(hsv, lower_bound, upper_bound)
