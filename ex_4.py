@@ -1,3 +1,4 @@
+# get the edges of the objects in an image
 import cv2
 import numpy as np
 
